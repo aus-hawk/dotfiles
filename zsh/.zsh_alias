@@ -1,0 +1,22 @@
+# ls
+alias ls='ls --color=auto -F'
+alias ll='ls -Al'
+
+# mkdir
+alias mkdir='mkdir -pv'
+
+# rm
+alias rm='rm -I --preserve-root'
+
+# grep
+alias grep='grep -n --color=auto'
+alias egrep='egrep -n --color=auto'
+alias fgrep='fgrep -n --color=auto'
+alias todo='grep -e TODO -e FIXME'
+
+# dotfile
+alias dotfile="stow -v -t $HOME -d $HOME/dotfiles"
+alias dotfile-test='dotfile -n'
+
+# cat
+alias cat="bat --theme='Solarized (dark)'"

@@ -1,0 +1,70 @@
+""" Visual Aides
+" show command as it is being entered
+set showcmd
+
+" syntax highlighting
+syntax on
+set background=dark
+colorscheme solarized
+
+" highlight the space in column 80 and on
+let &colorcolumn=join(range(80,999), ",")
+
+" highlight search matches as they are being typed
+set hlsearch incsearch
+
+" show relative line numbers
+set number relativenumber
+
+" highlight current line
+set cursorline
+
+" when showing whitespace, use these characters
+set listchars=eol:$,tab:»\ ,space:·,trail:#
+
+
+
+""" Editing aides
+" code formatting
+set autoindent
+filetype plugin indent on
+
+"" Rebinds
+" rebind ^c to be equivalent to Esc in INSERT mode
+inoremap <C-c> <Esc>
+
+" automatic closing character insertion
+inoremap ( ()<Left>
+inoremap <expr> ) getline('.')[col('.')-1] == ")" ? "\<Right>" : ")"
+
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+inoremap <expr> } getline('.')[col('.')-1] == "}" ? "\<Right>" : "}"
+
+inoremap [ []<Left>
+inoremap <expr> ] getline('.')[col('.')-1] == "]" ? "\<Right>" : "]"
+
+inoremap " ""<Left>
+inoremap <expr> " getline('.')[col('.')-1] == "\"" ? "\<Right>" : "\"\"\<Left>"
+
+inoremap ' ''<Left>
+inoremap <expr> ' getline('.')[col('.')-1] == "\'" ? "\<Right>" : "\'\'\<Left>"
+
+" C indenting options
+set cinoptions=:0,l1,g0,N-s,E-s,(s,m1
+
+" search for tags file from current dir up to ~ until first match
+set tags=./tags,tags;$HOME
+
+" TODO file templates
+"command -nargs=+ TemplateReplace %s/
+"autocmd BufNewFile * {
+"	silent! 0r ~/.vim/template/template.%:e
+"	}
+
+
+
+""" Misc
+" keep generated files from cluttering the .vim directory
+set viminfo+=n~/.gen/vim/viminfo
+let g:netrw_home='~/.gen/vim'

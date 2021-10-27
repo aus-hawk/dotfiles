@@ -1,0 +1,7 @@
+[user]
+	email = aushawk0@gmail.com
+	name = Austin Hawkins
+[core]
+	excludesfile = ~/.gitignore
+[init]
+	defaultBranch = main
