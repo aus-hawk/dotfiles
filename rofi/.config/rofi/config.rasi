@@ -1,0 +1,68 @@
+configuration {
+	modes: [drun, window, run];
+
+	font: "Fira Code 14";
+
+	drun {
+		display-name: "";
+	}
+
+	run {
+		display-name: "";
+	}
+
+	window {
+		display-name: "";
+	}
+}
+
+@theme "/dev/null"
+
+* {
+	nord0: #2e3440;
+	nord1: #3b4252;
+	nord6: #eceff4;
+	nord8: #88c0d0;
+	background-color: @nord1;
+	text-color: @nord6;
+	width: 50%;
+	height: 50%;
+}
+
+inputbar {
+	children: [prompt, entry];
+	background-color: @nord0;
+}
+
+prompt {
+	background-color: @nord0;
+	padding: 25px;
+}
+
+entry {
+	background-color: @nord0;
+	padding: 25px 0;
+}
+
+listview {
+	padding: 25px;
+	cycle: false;
+	scrollbar: false;
+}
+
+element {
+	children: [element-icon, element-text];
+}
+
+element-text {
+	text-color: @nord8;
+	padding: 5px;
+}
+
+element-text selected {
+	text-color: @nord6;
+}
+
+element-icon {
+	padding: 5px;
+}
