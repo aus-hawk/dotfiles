@@ -36,4 +36,4 @@ fi
 feh --bg-fill --no-fehbg --randomize "$(xdg-user-dir PICTURES)"/wallpapers/*
 # Start the compositor.
 picom &
-exec i3
+exec bspwm
