@@ -46,6 +46,16 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	light -U 10
 
+# screenshots
+{_,super + }@Print
+	maim {_,-s} | tee ~/pictures/screenshots/$(date +%F_%T).png | \
+	xclip -selection clipboard -t image/png
+
+super + shift + @Print
+	maim -i $(xdotool getactivewindow) | \
+	tee ~/pictures/screenshots/$(date +%F_%T).png | \
+	xclip -selection clipboard -t image/png
+
 #
 # bspwm hotkeys
 #
