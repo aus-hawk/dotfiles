@@ -47,8 +47,8 @@ XF86MonBrightnessDown
 	light -U 10
 
 # screenshots
-{_,super + }@Print
-	maim {_,-s} | tee ~/pictures/screenshots/$(date +%F_%T).png | \
+{_,super + ,ctrl + }@Print
+	maim {_,-s,-d 3} | tee ~/pictures/screenshots/$(date +%F_%T).png | \
 	xclip -selection clipboard -t image/png
 
 super + shift + @Print
