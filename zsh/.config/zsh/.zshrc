@@ -9,5 +9,5 @@ source "$ZDOTDIR/plugins.zsh"
 
 # Run startx on login, only on VT1.
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-	exec startx "$XINITRC"
+    exec startx "$XINITRC"
 fi

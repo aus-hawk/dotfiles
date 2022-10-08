@@ -8,27 +8,27 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local normal = {
-	["<Leader>e"] = ":NvimTreeFocus<CR>",
-	["<Leader>d"] = ":lua vim.lsp.buf.definition()<CR>",
-	["<Leader>b"] = "<C-t>",
-	["<Leader>h"] = ":lua vim.lsp.buf.hover()<CR>",
-	["<Leader>?"] = ":lua vim.diagnostic.open_float()<CR>",
-	["<Leader>f"] = ":lua vim.lsp.buf.formatting()<CR>",
+    ["<Leader>e"] = ":NvimTreeFocus<CR>",
+    ["<Leader>d"] = ":lua vim.lsp.buf.definition()<CR>",
+    ["<Leader>b"] = "<C-t>",
+    ["<Leader>h"] = ":lua vim.lsp.buf.hover()<CR>",
+    ["<Leader>?"] = ":lua vim.diagnostic.open_float()<CR>",
+    ["<Leader>f"] = ":lua vim.lsp.buf.formatting()<CR>",
 
-	["<Leader>/"] = ":nohlsearch<CR>",
+    ["<Leader>/"] = ":nohlsearch<CR>",
 
-	-- Easier window navigation.
-	["<C-h>"] = "<C-w>h",
-	["<C-l>"] = "<C-w>l",
-	["<C-j>"] = "<C-w>j",
-	["<C-k>"] = "<C-w>k",
+    -- Easier window navigation.
+    ["<C-h>"] = "<C-w>h",
+    ["<C-l>"] = "<C-w>l",
+    ["<C-j>"] = "<C-w>j",
+    ["<C-k>"] = "<C-w>k",
 
-	["<C-Up>"] = ":resize +1<CR>",
-	["<C-Down>"] = ":resize -1<CR>",
-	["<C-Left>"] = ":vertical resize -1<CR>",
-	["<C-Right>"] = ":vertical resize +1<CR>",
+    ["<C-Up>"] = ":resize +1<CR>",
+    ["<C-Down>"] = ":resize -1<CR>",
+    ["<C-Left>"] = ":vertical resize -1<CR>",
+    ["<C-Right>"] = ":vertical resize +1<CR>",
 }
 
 for k, v in pairs(normal) do
-	keymap("n", k, v, opts)
+    keymap("n", k, v, opts)
 end
