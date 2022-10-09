@@ -1,4 +1,5 @@
-export PATH="$HOME/.local/bin:$PATH"
+typeset -U path # prevent duplicate entries in path
+export path=("$HOME/.local/bin" $path)
 
 export EDITOR=nvim
 export VISUAL=nvim
