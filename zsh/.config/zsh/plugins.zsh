@@ -3,7 +3,7 @@ maybe-source() {
 }
 
 load-plugin() {
-    mkdir "$XDG_DATA_HOME/zsh/plugins"
+    mkdir -p "$XDG_DATA_HOME/zsh/plugins"
     plugin=$(echo $1 | cut -f 2 -d "/")
     plugin_folder="$XDG_DATA_HOME/zsh/plugins/$plugin"
     if [[ ! -d "$plugin_folder" ]]; then
