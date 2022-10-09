@@ -1,13 +1,11 @@
 # ls
-alias ls="ls --color=auto -F"
-alias ll="ls -Al"
-
-# mkdir
-alias mkdir="mkdir -pv"
+alias ls="ls --color=auto"
+alias ll="ls -AFl"
 
 # grep
-alias grep="grep -ns --color=auto"
-alias todo="grep -e TODO -e FIXME"
+alias grep="grep --color=auto"
+alias cgrep="grep -ns"
+alias todo="cgrep -e TODO -e FIXME"
 
 # dotfile
 alias dotfile="stow -v --no-folding -t $HOME -d $HOME/dotfiles"
