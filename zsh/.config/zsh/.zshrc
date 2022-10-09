@@ -7,7 +7,12 @@ source "$ZDOTDIR/prompt.zsh"
 source "$ZDOTDIR/completion.zsh"
 source "$ZDOTDIR/plugins.zsh"
 
-# Run startx on login, only on VT1.
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-    exec startx "$XINITRC"
+if [ -z "$DISPLAY" ]; then
+    # Run startx on login, only on VT1.
+    if [ "$XDG_VTNR" -eq 1 ]; then
+        exec startx "$XINITRC"
+    elif [ "$TERM" = "linux" ]; then
+        source "$ZDOTDIR/ttythemes/nord.zsh"
+        clear
+    fi
 fi
