@@ -18,7 +18,8 @@ update-plugins() {
     for plugin in "$XDG_DATA_HOME"/zsh/plugins/*; do
         pushd $plugin > /dev/null
         echo Updating $(echo $plugin | awk -F "/" '{print $NF}')...
-        git pull --depth 1
+        git fetch --depth 1
+        git reset --hard origin/$(git branch --show-current)
         popd > /dev/null
         echo
     done
