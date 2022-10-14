@@ -20,7 +20,7 @@ build-prompt() {
     p="$p%(?.. [%F{1}%?%f])"
     echo "$p"
 
-    echo ":: "
+    echo "$ "
 }
 
 PROMPT='$(build-prompt)'
