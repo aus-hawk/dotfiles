@@ -1,7 +1,7 @@
 current-git-branch() {
     if git rev-parse 2>/dev/null; then
         info=" $(git branch --show-current)"
-        if [[ $(git status --porcelain) ]]; then
+        if [[ $(git status --porcelain 2>/dev/null) ]]; then
             info="$info *"
         fi
         echo "$info"
