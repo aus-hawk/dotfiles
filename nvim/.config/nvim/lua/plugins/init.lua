@@ -60,9 +60,6 @@ packer.startup(function(use)
 
     -- Automatic pair character insertion
     use "jiangmiao/auto-pairs"
-
-    -- Improve Python bracket indentation
-    use "Vimjas/vim-python-pep8-indent"
 end)
 
 if fresh_install then
