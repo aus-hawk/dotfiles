@@ -13,7 +13,7 @@ local normal = {
     ["<Leader>b"] = "<C-t>",
     ["<Leader>h"] = ":lua vim.lsp.buf.hover()<CR>",
     ["<Leader>?"] = ":lua vim.diagnostic.open_float()<CR>",
-    ["<Leader>f"] = ":lua vim.lsp.buf.formatting()<CR>",
+    ["<Leader>f"] = ":lua vim.lsp.buf.format({async = true})<CR>",
 
     ["<Leader>/"] = ":nohlsearch<CR>",
 
