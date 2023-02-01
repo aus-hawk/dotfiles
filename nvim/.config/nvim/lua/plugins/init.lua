@@ -1,6 +1,6 @@
 local fn = vim.fn
 
-local data_dir = fn.stdpath("data")
+local data_dir = fn.stdpath "data"
 local packer_loc = data_dir .. "/site/pack/packer/start/packer.nvim"
 local fresh_install = fn.empty(fn.glob(packer_loc)) ~= 0
 if fresh_install then
@@ -10,7 +10,7 @@ if fresh_install then
     vim.cmd "packadd packer.nvim"
 end
 
-local packer = require("packer")
+local packer = require "packer"
 
 packer.startup(function(use)
     -- packer.nvim can manage itself
@@ -40,7 +40,7 @@ packer.startup(function(use)
             -- Snippets
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip",
-        }
+        },
     }
 
     -- LSP and linting

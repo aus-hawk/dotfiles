@@ -3,6 +3,6 @@ require("nvim-tree").setup {
         indent_markers = {
             enable = true,
             inline_arrows = false,
-        }
-    }
+        },
+    },
 }

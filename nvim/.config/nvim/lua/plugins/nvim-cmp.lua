@@ -1,5 +1,5 @@
-local cmp = require("cmp")
-local luasnip = require("luasnip")
+local cmp = require "cmp"
+local luasnip = require "luasnip"
 
 local cursor_after_text = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -7,7 +7,7 @@ local cursor_after_text = function()
         return false
     else
         c = vim.api.nvim_buf_get_lines(0, line - 1, line, false)[1]
-        return c:sub(col, col):match("%s") == nil
+        return c:sub(col, col):match "%s" == nil
     end
 end
 
@@ -20,15 +20,15 @@ cmp.setup {
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body)
-        end
+        end,
     },
     mapping = cmp.mapping.preset.insert {
         ["<CR>"] = cmp.mapping.confirm { select = true },
         ["<C-j>"] = cmp.mapping.select_next_item {
-            behavior = cmp.SelectBehavior.Select
+            behavior = cmp.SelectBehavior.Select,
         },
         ["<C-k>"] = cmp.mapping.select_prev_item {
-            behavior = cmp.SelectBehavior.Select
+            behavior = cmp.SelectBehavior.Select,
         },
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
