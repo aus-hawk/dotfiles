@@ -1,6 +1,24 @@
 require("lspconfig").ccls.setup {} -- C/C++
 require("lspconfig").pyright.setup {} -- Python
-require("lspconfig").sumneko_lua.setup {} -- Lua
+require("lspconfig").sumneko_lua.setup { -- Lua
+    settings = {
+        Lua = {
+            runtime = {
+                version = "LuaJIT",
+            },
+            diagnostics = {
+                globals = { "vim" },
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+                checkThirdParty = false,
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
+}
 
 vim.diagnostic.config { virtual_text = false }
 
