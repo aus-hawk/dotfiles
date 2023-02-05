@@ -8,8 +8,8 @@ null_ls.setup {
             extra_args = function(params)
                 local venv_locations = { "venv", ".venv" }
                 for _, venv in pairs(venv_locations) do
-                    venv = venv .. "bin/python"
-                    if vim.fn.empty(vim.fn.glob(venv)) ~= 0 then
+                    venv = venv .. "/bin/python"
+                    if vim.fn.empty(vim.fn.glob(venv)) == 0 then
                         return { "--python-executable", venv }
                     end
                 end
