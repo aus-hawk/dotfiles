@@ -7,7 +7,7 @@ local options = {
     foldmethod = "syntax",
     list = true,
     listchars = { trail = "·", tab = "  " },
-    mouse = "a",
+    mouse = "",
     number = true,
     relativenumber = true,
     shiftwidth = 4,
