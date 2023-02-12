@@ -23,7 +23,7 @@ cmp.setup {
         end,
     },
     mapping = cmp.mapping.preset.insert {
-        ["<CR>"] = cmp.mapping.confirm { select = true },
+        ["<CR>"] = cmp.mapping.confirm(),
         ["<C-j>"] = cmp.mapping.select_next_item {
             behavior = cmp.SelectBehavior.Select,
         },
