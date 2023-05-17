@@ -1,6 +1,6 @@
 require("lspconfig").ccls.setup {} -- C/C++
 require("lspconfig").pyright.setup {} -- Python
-require("lspconfig").sumneko_lua.setup { -- Lua
+require("lspconfig").lua_ls.setup { -- Lua
     settings = {
         Lua = {
             runtime = {
