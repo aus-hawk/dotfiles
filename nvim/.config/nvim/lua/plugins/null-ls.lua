@@ -18,7 +18,9 @@ null_ls.setup {
             end,
         },
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.prettier.with {
+            disabled_filetypes = { "jinja" },
+        },
         null_ls.builtins.formatting.djlint,
         null_ls.builtins.diagnostics.djlint,
     },
