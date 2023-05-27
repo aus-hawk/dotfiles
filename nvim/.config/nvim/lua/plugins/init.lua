@@ -60,6 +60,9 @@ packer.startup(function(use)
 
     -- Automatic pair character insertion
     use "jiangmiao/auto-pairs"
+
+    -- Jinja syntax support
+    use "Glench/Vim-Jinja2-Syntax"
 end)
 
 if fresh_install then
