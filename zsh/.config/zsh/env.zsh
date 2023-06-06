@@ -16,3 +16,5 @@ export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 export PYTHONSTARTUP="$HOME/.config/python/startup.py"
+
+export GOPATH="$XDG_DATA_HOME/go" # I hate Go!
