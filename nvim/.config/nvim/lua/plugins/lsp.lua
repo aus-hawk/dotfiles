@@ -1,5 +1,6 @@
 require("lspconfig").ccls.setup {} -- C/C++
 require("lspconfig").pyright.setup {} -- Python
+require("lspconfig").gopls.setup {} -- Go
 require("lspconfig").lua_ls.setup { -- Lua
     settings = {
         Lua = {

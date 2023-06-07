@@ -1,6 +1,7 @@
 local null_ls = require "null-ls"
 null_ls.setup {
     sources = {
+        -- Python
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
         null_ls.builtins.diagnostics.flake8,
@@ -17,12 +18,21 @@ null_ls.setup {
                 return {}
             end,
         },
+
+        -- Lua
         null_ls.builtins.formatting.stylua,
+
+        -- HTML/CSS/JS/YAML
         null_ls.builtins.formatting.prettier.with {
             disabled_filetypes = { "jinja" },
         },
+
+        -- Jinja/Django
         null_ls.builtins.formatting.djlint,
         null_ls.builtins.diagnostics.djlint,
+
+        -- Go
+        null_ls.builtins.formatting.gofmt,
     },
     diagnostics_format = "#{m} (#{s})",
 }
