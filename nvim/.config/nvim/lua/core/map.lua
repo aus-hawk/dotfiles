@@ -27,6 +27,12 @@ local normal = {
     ["<C-Down>"] = ":resize -1<CR>",
     ["<C-Left>"] = ":vertical resize -1<CR>",
     ["<C-Right>"] = ":vertical resize +1<CR>",
+
+    -- Convenient wrapped line navigation
+    ["j"] = "gj",
+    ["gj"] = "j",
+    ["k"] = "gk",
+    ["gk"] = "k",
 }
 
 for k, v in pairs(normal) do
