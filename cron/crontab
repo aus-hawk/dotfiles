@@ -1,0 +1,8 @@
+# Change the wallpaper every 5 minutes
+*/5 * * * * DISPLAY=:0 feh --bg-fill --no-fehbg --randomize "$(xdg-user-dir PICTURES)"/wallpapers/*
+
+# Kill discord every day from 12:00 PM to 8:59 PM
+* 12-20 * * * pkill -i discord
+
+# Start discord at 9:00 PM
+0 21 * * * DISPLAY=:0 discord

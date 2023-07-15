@@ -1,0 +1,104 @@
+method: shallow
+root: "$XDG_CONFIG_HOME/*"
+
+check-cmd:
+  arch: ["pacman", "-T"]
+
+install-cmd:
+  arch: ["pacman", "-S", "--noconfirm"]
+
+packages:
+  cron:
+    arch: ["cronie"]
+
+  graphics-driver:
+    "arch graphics-driver:(.*)":
+      - "xf86-video-$1"
+
+  nerd-fonts:
+    arch: 
+      - "ttf-nerd-fonts-symbols"
+      - "ttf-nerd-fonts-symbols-common"
+      - "ttf-nerd-fonts-symbols-mono"
+
+  spotify:
+    arch: ["spotify-launcher"]
+
+  xorg:
+    arch:
+      - "xorg"
+      - "xorg-xinit"
+      - "xf86-input-libinput"
+
+dots:
+  bspwm:
+    rules:
+      arch:
+        bspwmrc: "$XDG_CONFIG_HOME/bspwm/bspwmrc"
+        scripts: "$XDG_CONFIG_HOME/bspwm/scripts"
+        sxhkdrc: "$XDG_CONFIG_HOME/sxhkd/sxhkdrc"
+    packages:
+      bspwm: "Tiling window manager"
+      sxhkd: "Keyboard shortcuts"
+      light: "Monitor backlight control"
+      playerctl: "Media playback control"
+      kitty: "Terminal emulator" # Installed with bspwm just in case
+
+  cron:
+    method: none
+    deploy:
+      arch:
+        - ["crontab", "cron/crontab"]
+    packages:
+      cron: "Trigger commands at certain times on certain dates"
+
+  kitty:
+    packages:
+      kitty: "Terminal emulator"
+
+  nvim:
+    packages:
+      neovim: "Text editor"
+      nerd-fonts: "Icons for things like file types and LSP notifications"
+
+  picom:
+    packages:
+      picom: "Window compositor"
+
+  polybar:
+    packages:
+      polybar: "Status bar"
+      nerd-fonts: "Icons on status bar"
+
+  python:
+    packages:
+      python: "Python programming language"
+
+  ranger:
+    packages:
+      ranger: "CLI file browser"
+
+  rofi:
+    packages:
+      rofi: "Program running menu"
+
+  X11:
+    packages:
+      driver: "Graphics driver"
+      xorg: "X window system"
+
+  zsh:
+    method: deep
+    rules:
+      arch:
+        "dot-zshenv": "~/.zshenv"
+
+  misc:
+    packages:
+      bat: "cat command with syntax highlighting"
+      discord: "Voice and text chat"
+      firefox: "Web browser"
+      htop: "Process monitor"
+      neofetch: "System info eye candy"
+      obsidian: "Markdown note taking"
+      spotify: "Music player"

@@ -12,6 +12,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 export MANWIDTH=80
 export MANPAGER="sh -c 'col -bx | bat -l man -p --theme=Nord'"
+export MANROFFOPT="-c"
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
