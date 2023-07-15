@@ -44,10 +44,4 @@ xinput set-prop $touchpad_id "libinput Disable While Typing Enabled" 1
 xinput set-prop $touchpad_id "libinput Horizontal Scroll Enabled" 1
 xinput set-prop $touchpad_id "libinput Natural Scrolling Enabled" 1
 
-# Set initial background randomly.
-feh --bg-fill --no-fehbg --randomize "$(xdg-user-dir PICTURES)"/wallpapers/*
-
-# Start the compositor.
-picom &
-
 exec bspwm

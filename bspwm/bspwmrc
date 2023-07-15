@@ -2,6 +2,12 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# Set initial background randomly.
+feh --bg-fill --no-fehbg --randomize "$(xdg-user-dir PICTURES)"/wallpapers/*
+
+# Start the compositor.
+picom &
+
 # ensure backlight never goes completely dark
 light -N 10
 
