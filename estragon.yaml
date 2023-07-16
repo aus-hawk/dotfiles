@@ -49,16 +49,6 @@ packages:
       - "xorg-xinit"
       - "xf86-input-libinput"
 
-  xorg-utils:
-    arch:
-      - "xorg-setxkbmap"
-      - "xorg-xinput"
-
-  zsh:
-    arch:
-      - "zsh"
-      - "zsh-completions"
-
 dots:
   bspwm:
     rules:
@@ -95,7 +85,6 @@ dots:
       xdg-utils: "Tools to do things like set the default browser"
 
   git:
-    method: shallow
     packages:
       git: "Version control"
 
@@ -136,7 +125,8 @@ dots:
     packages:
       xorg: "X window system"
       graphics-driver: "Graphics driver"
-      xorg-utils: "Utilities for configuring things like keyboard and mouse"
+      xorg-setxkbmap: "Set the keyboard map"
+      xorg-xinput: "Configure the touchpad"
 
   zsh:
     method: deep
@@ -145,6 +135,7 @@ dots:
         "dot-zshenv": "~/.zshenv"
     packages:
       zsh: "Command line shell"
+      zsh-completions: "Shell tab completions for commands"
 
   misc:
     method: none
