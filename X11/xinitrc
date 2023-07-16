@@ -20,4 +20,7 @@ xinput set-prop $touchpad_id "libinput Disable While Typing Enabled" 1
 xinput set-prop $touchpad_id "libinput Horizontal Scroll Enabled" 1
 xinput set-prop $touchpad_id "libinput Natural Scrolling Enabled" 1
 
+# Turn numlock on
+numlockx &
+
 exec bspwm

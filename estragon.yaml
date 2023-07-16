@@ -132,6 +132,7 @@ dots:
       graphics-driver: "Graphics driver"
       xorg-setxkbmap: "Set the keyboard map"
       xorg-xinput: "Configure the touchpad"
+      numlockx: "Enable numlock on X startup"
 
   xdg:
     root: "$XDG_CONFIG_HOME"
