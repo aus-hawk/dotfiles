@@ -92,6 +92,7 @@ dots:
     packages:
       firefox: "Web browser"
       fonts: "Basic fonts for full unicode support"
+      xdg-utils: "Tools to do things like set the default browser"
 
   git:
     method: shallow

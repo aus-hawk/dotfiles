@@ -78,6 +78,9 @@ fi
 
 case $1 in
     arch)
+        echo "Changing default browser to Firefox"
+        xdg-settings set default-web-browser firefox.desktop
+
         echo "Unmuting audio"
         amixer sset Master unmute
         amixer sset Master 50%
