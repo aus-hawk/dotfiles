@@ -100,6 +100,7 @@ dots:
         "dot-zshenv": "~/.zshenv"
 
   misc:
+    method: none
     packages:
       bat: "cat command with syntax highlighting"
       discord: "Voice and text chat"
