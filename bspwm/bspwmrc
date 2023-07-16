@@ -34,7 +34,7 @@ bspc rule -a obsidian desktop="^7"
 kitty &
 firefox &
 discord &
-spotify &
+spotify-launcher &
 obsidian &
 
 bspc config external_rules_command "$XDG_CONFIG_HOME/bspwm/scripts/spotify.sh"
