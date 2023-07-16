@@ -17,6 +17,9 @@ packages:
   cron:
     arch: ["cronie"]
 
+  fira-code:
+    arch: ["ttf-fira-code"]
+
   graphics-driver:
     "arch gfx:(.*)": ["xf86-video-$1"]
 
@@ -60,6 +63,7 @@ dots:
   kitty:
     packages:
       kitty: "Terminal emulator"
+      fira-code: "Fira Code font with ligatures"
 
   nvim:
     packages:
@@ -74,6 +78,7 @@ dots:
     packages:
       polybar: "Status bar"
       nerd-fonts: "Icons on status bar"
+      fira-code: "Fira Code font with ligatures"
 
   python:
     packages:
@@ -86,6 +91,7 @@ dots:
   rofi:
     packages:
       rofi: "Program running menu"
+      fira-code: "Fira Code font with ligatures"
 
   X11:
     packages:
