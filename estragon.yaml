@@ -21,7 +21,7 @@ packages:
     "arch gfx:(.*)": ["xf86-video-$1"]
 
   nerd-fonts:
-    arch: 
+    arch:
       - "ttf-nerd-fonts-symbols"
       - "ttf-nerd-fonts-symbols-common"
       - "ttf-nerd-fonts-symbols-mono"
