@@ -133,6 +133,12 @@ dots:
       xorg-setxkbmap: "Set the keyboard map"
       xorg-xinput: "Configure the touchpad"
 
+  xdg:
+    root: "$XDG_CONFIG_HOME"
+    method: deep
+    packages:
+      xdg-user-dirs: "Set the names of common home directory folders like downloads"
+
   zsh:
     method: deep
     rules:
