@@ -34,9 +34,14 @@ packages:
 
   xorg:
     arch:
-      - "xorg"
+      - "xorg-server"
       - "xorg-xinit"
       - "xf86-input-libinput"
+
+  xorg-utils:
+    arch:
+      - "xorg-setxkbmap"
+      - "xorg-xinput"
 
 dots:
   bspwm:
@@ -102,6 +107,7 @@ dots:
     packages:
       graphics-driver: "Graphics driver"
       xorg: "X window system"
+      xorg-utils: "Utilities for configuring things like keyboard and mouse"
 
   zsh:
     method: deep
