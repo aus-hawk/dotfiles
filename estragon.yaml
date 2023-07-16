@@ -51,6 +51,11 @@ packages:
       - "xorg-setxkbmap"
       - "xorg-xinput"
 
+  zsh:
+    arch:
+      - "zsh"
+      - "zsh-completions"
+
 dots:
   bspwm:
     rules:
@@ -134,6 +139,8 @@ dots:
     rules:
       arch:
         "dot-zshenv": "~/.zshenv"
+    packages:
+      zsh: "Command line shell"
 
   misc:
     method: none
