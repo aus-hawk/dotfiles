@@ -7,13 +7,18 @@ check-cmd:
 install-cmd:
   arch: ["pacman", "-S", "--noconfirm"]
 
+validate:
+  "": ["arch"]
+  arch:
+    # amdgpu for AMD, intel for Intel, and nouveau for Nvidia
+    - "gfx:(amdgpu|intel|nouveau)"
+
 packages:
   cron:
     arch: ["cronie"]
 
   graphics-driver:
-    "arch graphics-driver:(.*)":
-      - "xf86-video-$1"
+    "arch gfx:(.*)": ["xf86-video-$1"]
 
   nerd-fonts:
     arch: 
@@ -84,7 +89,7 @@ dots:
 
   X11:
     packages:
-      driver: "Graphics driver"
+      graphics-driver: "Graphics driver"
       xorg: "X window system"
 
   zsh:
