@@ -60,6 +60,11 @@ dots:
     packages:
       cron: "Trigger commands at certain times on certain dates"
 
+  git:
+    method: shallow
+    packages:
+      git: "Version control"
+
   kitty:
     packages:
       kitty: "Terminal emulator"

@@ -1,0 +1,7 @@
+[user]
+	email = 14896328+aus-hawk@users.noreply.github.com
+	name = Austin Hawkins
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
