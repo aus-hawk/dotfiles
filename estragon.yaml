@@ -48,7 +48,6 @@ dots:
       feh: "Image viewer used to change the wallpaper"
       light: "Monitor backlight control"
       playerctl: "Media playback control"
-      kitty: "Terminal emulator" # Installed with bspwm just in case
 
   cron:
     method: none
