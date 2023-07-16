@@ -20,6 +20,14 @@ packages:
   fira-code:
     arch: ["ttf-fira-code"]
 
+  fonts:
+    arch:
+      - "gnu-free-fonts"
+      - "noto-fonts"
+      - "noto-fonts-cjk"
+      - "noto-fonts-emoji"
+      - "noto-fonts-extra"
+
   graphics-driver:
     "arch gfx:(.*)": ["xf86-video-$1"]
 
@@ -64,6 +72,18 @@ dots:
         - ["crontab", "cron/crontab"]
     packages:
       cron: "Trigger commands at certain times on certain dates"
+
+  firefox:
+    method: none
+    environments:
+      "firefox-chrome":
+        method: deep
+    rules:
+      "firefox-chrome":
+        "userChrome.css": "~/.mozilla/firefox/$firefox_profile/chrome/userChrome.css"
+    packages:
+      firefox: "Web browser"
+      fonts: "Basic fonts for full unicode support"
 
   git:
     method: shallow
@@ -120,7 +140,6 @@ dots:
     packages:
       bat: "cat command with syntax highlighting"
       discord: "Voice and text chat"
-      firefox: "Web browser"
       htop: "Process monitor"
       neofetch: "System info eye candy"
       obsidian: "Markdown note taking"
