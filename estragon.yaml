@@ -130,8 +130,8 @@ dots:
 
   X11:
     packages:
-      graphics-driver: "Graphics driver"
       xorg: "X window system"
+      graphics-driver: "Graphics driver"
       xorg-utils: "Utilities for configuring things like keyboard and mouse"
 
   zsh:
