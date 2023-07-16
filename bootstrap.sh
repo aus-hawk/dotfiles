@@ -6,6 +6,13 @@
 # exit 4 = Bad setup
 # exit 5 = Bad config deployment
 
+if [[ $# -eq 0 ]]; then
+    echo "Distro name not passed as the first argument"
+    echo "Usage: ./bootstrap.sh [DISTRO]"
+    echo "Valid distros: arch"
+    exit 1
+fi
+
 # Needed for setting up Go as well as running Estragon
 localbin=${localbin:-"$HOME/.local/bin"}
 
@@ -15,13 +22,6 @@ if [[ ! -x "$(command -v estragon)" ]]; then
     if [[ ! -x "$(command -v go)" ]]; then
         echo "Go is not installed"
         echo "Installing Go for $1"
-
-        if [[ $# -eq 0 ]]; then
-            echo "Distro name not passed as the first argument"
-            echo "Usage: ./bootstrap.sh [DISTRO]"
-            echo "Valid distros: arch"
-            exit 1
-        fi
 
         case "$1" in
             arch)
@@ -75,6 +75,18 @@ chsh -s /bin/zsh
 if [[ $? -ne 0 ]]; then
     echo "Failed to change shell to Zsh"
 fi
+
+case $1 in
+    arch)
+        echo "Unmuting audio"
+        amixer sset Master unmute
+        amixer sset Master 50%
+        amixer sset Speaker unmute
+        amixer sset Speaker 100%
+        amixer sset Headphone unmute
+        amixer sset Headphone 100%
+        ;;
+esac
 
 echo "Deploying dotfiles"
 "$localbin/estragon" deploy --all

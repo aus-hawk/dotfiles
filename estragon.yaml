@@ -14,6 +14,9 @@ validate:
     - "gfx:(amdgpu|intel|nouveau)"
 
 packages:
+  audio:
+    arch: ["alsa-utils"]
+
   cron:
     arch: ["cronie"]
 
@@ -145,6 +148,7 @@ dots:
   misc:
     method: none
     packages:
+      audio: "Utilities for audio"
       bat: "cat command with syntax highlighting"
       discord: "Voice and text chat"
       htop: "Process monitor"
