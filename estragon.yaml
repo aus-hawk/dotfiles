@@ -32,7 +32,7 @@ packages:
       - "noto-fonts-extra"
 
   graphics-driver:
-    "arch gfx:(.*)": ["xf86-video-$1"]
+    "arch gfx:(amdgpu|intel|nouveau)": ["xf86-video-$1"]
 
   nerd-fonts:
     arch:
