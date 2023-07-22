@@ -89,6 +89,9 @@ case $1 in
         amixer sset Speaker 100%
         amixer sset Headphone unmute
         amixer sset Headphone 100%
+
+        echo "Enabling cron service (cronie)"
+        systemctl enable --now cronie.service
         ;;
 esac
 
