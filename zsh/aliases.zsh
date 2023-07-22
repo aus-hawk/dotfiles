@@ -12,3 +12,6 @@ alias bat="bat --theme='Nord'"
 
 # vim
 alias v=nvim
+
+# pacman
+alias pacman="pacman --color=auto"
