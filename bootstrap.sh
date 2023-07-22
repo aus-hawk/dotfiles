@@ -13,9 +13,6 @@ if [[ $# -eq 0 ]]; then
     exit 1
 fi
 
-# Needed for setting up Go as well as running Estragon
-localbin=${localbin:-"$HOME/.local/bin"}
-
 if [[ ! -x "$(command -v estragon)" ]]; then
     echo "Estragon is not installed"
 
@@ -40,7 +37,7 @@ if [[ ! -x "$(command -v estragon)" ]]; then
     fi
 
     XDG_DATA_HOME=${XDG_DATA_HOME:-"$HOME/.local/share"}
-    echo $localbin
+    localbin=${localbin:-"$HOME/.local/bin"}
     go env -w GOPATH="$XDG_DATA_HOME/go" GOBIN="$localbin"
 
     go install github.com/aus-hawk/estragon@latest
@@ -49,13 +46,17 @@ if [[ ! -x "$(command -v estragon)" ]]; then
         exit 1
     fi
 
+    estragon="$localbin/estragon"
+
     echo "Estragon has been installed successfully"
+else
+    estragon=estragon
 fi
 
-if ! "$localbin/estragon" > /dev/null; then
+if ! "$estragon" > /dev/null 2>&1; then
     echo "Something is wrong with the Estragon environment string"
     echo "Set it to a valid one with:"
-    echo '    "$localbin/estragon" -e [ENV]'
+    echo "    \"$estragon\" -e [ENV]"
     echo "and rerun"
     exit 2
 fi
@@ -64,7 +65,7 @@ fi
 XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
 
 echo "Installing packages"
-sudo "$localbin/estragon" install --all
+sudo "$estragon" install --all
 if [[ $? -ne 0 ]]; then
     echo "Failed to install packages"
     exit 3
@@ -92,7 +93,7 @@ case $1 in
 esac
 
 echo "Deploying dotfiles"
-"$localbin/estragon" deploy --all
+"$estragon" deploy --all
 if [[ $? -ne 0 ]]; then
     echo "Failed to deploy dotfiles"
     exit 5
