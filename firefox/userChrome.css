@@ -7,3 +7,30 @@
 #sidebar-header {
     visibility: collapse;
 }
+
+/* Sidebery styling */
+/*
+#root {
+    --bg: #2e3440 !important;
+    --scroll-progress-h: 2px !important;
+    --scroll-progress-bg: #5e81ac !important;
+    --ctx-menu-bg: #2e3440 !important;
+    --ctx-menu-bg-hover: #3b4252 !important;
+    --ctx-menu-fg: #eceff4 !important;
+    --nav-btn-activated-bg: #434c5e !important;
+    --tabs-indent: 20px;
+    --tabs-count-font: .625rem sans-serif;
+    --tabs-fg: #eceff4 !important;
+    --tabs-fg-hover: #eceff4 !important;
+    --tabs-bg-hover: #3b4252 !important;
+    --tabs-bg-active: #434c5e !important;
+    --tabs-activated-bg: #434c5e !important;
+    --tabs-activated-fg: #eceff4 !important;
+    --tabs-selected-bg: #4c566a !important;
+    --tabs-selected-fg: #eceff4 !important;
+}
+
+#root .PinnedDock {
+    box-shadow: none !important;
+}
+*/
