@@ -96,7 +96,7 @@ case $1 in
 esac
 
 echo "Deploying dotfiles"
-"$estragon" deploy --all
+XDG_CONFIG_HOME="$XDG_CONFIG_HOME" "$estragon" deploy --all
 if [[ $? -ne 0 ]]; then
     echo "Failed to deploy dotfiles"
     exit 5
