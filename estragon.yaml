@@ -15,7 +15,9 @@ validate:
 
 packages:
   audio:
-    arch: ["alsa-utils"]
+    arch:
+      - "alsa-utils"
+      - "sof-firmware"
 
   cron:
     arch: ["cronie"]
