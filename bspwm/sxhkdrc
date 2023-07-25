@@ -11,7 +11,7 @@ super + Return
 
 # program launcher
 super + space
-    rofi -show drun
+    dpi=$(xrdb -get dpi); rofi -show drun $(test $dpi && echo -dpi $dpi)
 
 # make sxhkd reload its configuration files:
 super + Escape
