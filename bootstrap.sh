@@ -92,6 +92,9 @@ case $1 in
 
         echo "Enabling cron service (cronie)"
         systemctl enable --now cronie.service
+
+        echo "Adding $(id -nu) to video group for brightness control"
+        sudo usermod -aG video $(id -nu)
         ;;
 esac
 
