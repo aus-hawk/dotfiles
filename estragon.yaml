@@ -126,6 +126,7 @@ dots:
   ranger:
     packages:
       ranger: "CLI file browser"
+      python-pillow: "View images in kitty terminal"
 
   rofi:
     packages:
