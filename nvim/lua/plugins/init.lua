@@ -46,6 +46,7 @@ packer.startup(function(use)
     -- LSP and linting
     use {
         "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     }
 
@@ -53,6 +54,14 @@ packer.startup(function(use)
     use {
         "jose-elias-alvarez/null-ls.nvim",
         requires = "nvim-lua/plenary.nvim",
+    }
+
+    use {
+        "jay-babu/mason-null-ls.nvim",
+        requires = {
+            "williamboman/mason.nvim",
+            "jose-elias-alvarez/null-ls.nvim",
+        },
     }
 
     -- Indent guides

@@ -36,3 +36,7 @@ null_ls.setup {
     },
     diagnostics_format = "#{m} (#{s})",
 }
+
+require("mason-null-ls").setup {
+    automatic_installation = true,
+}
