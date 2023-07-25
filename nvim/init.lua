@@ -2,6 +2,7 @@ require "core/options"
 require "core/map"
 require "core/colorscheme"
 require "core/indent"
+require "core/ftdetect"
 
 require "plugins"
 require "plugins/lualine"
