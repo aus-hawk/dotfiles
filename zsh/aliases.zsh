@@ -1,11 +1,12 @@
 # ls
-alias ls="ls --color=auto"
-alias ll="ls -AFl"
+alias ls="ls --color=auto --classify=auto"
+alias ll="ls --almost-all -l"
+alias lh="ll --human-readable"
 
 # grep
 alias grep="grep --color=auto"
-alias cgrep="grep -ns"
-alias todo="cgrep -e TODO -e FIXME"
+alias cgrep="grep --line-number --no-messages"
+alias todo="cgrep --regexp=TODO --regexp=FIXME --recursive"
 
 # cat
 alias bat="bat --theme='Nord'"
