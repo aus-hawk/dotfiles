@@ -29,5 +29,12 @@ are set with `estragon envvar polybar_battery=BATTERY polybar_adapter=ADAPTER`.
 The bspwm config that calls polybar assumes that the Estragon directory to read
 is `~/dotfiles`.
 
+### DPI
+
+Some programs rely on the DPI of the monitor to be clarified in order to show at
+a proper size. This includes things like Firefox, Kitty, and Rofi. The `dpi`
+environment variable is used to control the DPI for all programs that use it to
+render text.
+
 [estragon]: https://github.com/aus-hawk/estragon
 [firefox-profile]: https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile

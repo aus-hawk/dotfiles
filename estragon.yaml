@@ -144,10 +144,6 @@ dots:
       fira-code: "Fira Code font with ligatures"
 
   X11:
-    method: deep
-    rules:
-      "arch ! high-dpi":
-        Xresources: ""
     packages:
       xorg: "X window system"
       graphics-driver: "Graphics driver"
