@@ -45,4 +45,5 @@ element-text selected {
 
 element-icon {
     padding: 5px;
+    size: 1em;
 }
