@@ -27,7 +27,13 @@ local normal = {
     ["<C-Down>"] = ":resize -1<CR>",
     ["<C-Left>"] = ":vertical resize -1<CR>",
     ["<C-Right>"] = ":vertical resize +1<CR>",
+}
 
+for k, v in pairs(normal) do
+    keymap("n", k, v, opts)
+end
+
+local all = {
     -- Convenient wrapped line navigation
     ["j"] = "gj",
     ["gj"] = "j",
@@ -35,6 +41,6 @@ local normal = {
     ["gk"] = "k",
 }
 
-for k, v in pairs(normal) do
-    keymap("n", k, v, opts)
+for k, v in pairs(all) do
+    keymap("", k, v, opts)
 end
