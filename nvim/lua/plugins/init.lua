@@ -79,6 +79,9 @@ packer.startup(function(use)
 
     -- Jinja syntax support
     use "Glench/Vim-Jinja2-Syntax"
+
+    -- Git changes in gutter
+    use "lewis6991/gitsigns.nvim"
 end)
 
 if fresh_install then
