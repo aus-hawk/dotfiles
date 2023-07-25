@@ -40,6 +40,15 @@ packages:
     # See: https://wiki.archlinux.org/title/Intel_graphics#Installation
     "arch gfx:intel": []
 
+  mason-cmds:
+    "arch":
+      - "git"
+      - "curl"
+      - "unzip"
+      - "tar"
+      - "gzip"
+      - "npm"
+
   nerd-fonts:
     arch:
       - "ttf-nerd-fonts-symbols"
@@ -108,6 +117,7 @@ dots:
     packages:
       neovim: "Text editor"
       nerd-fonts: "Icons for things like file types and LSP notifications"
+      mason-cmds: "Commands needed to use Mason.nvim"
 
   picom:
     packages:
