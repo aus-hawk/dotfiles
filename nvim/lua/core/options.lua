@@ -1,6 +1,6 @@
 local options = {
     clipboard = "unnamedplus",
-    colorcolumn = "+1",
+    colorcolumn = "+1,121",
     cursorline = true,
     expandtab = true,
     foldlevelstart = 99,
