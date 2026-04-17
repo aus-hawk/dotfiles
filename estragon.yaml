@@ -78,6 +78,7 @@ dots:
       light: "Monitor backlight control"
       maim: "Screenshot utility"
       network-manager-applet: "NetworkManager tray applet (nm-applet)"
+      blueman: "blueman tray applet (blueman-applet)"
       playerctl: "Media playback control"
       pulseaudio: "Audio multiplexing and audio controls"
       xclip: "Copy images to the X11 clipboard"
