@@ -1,10 +1,13 @@
 local options = {
+    -- yank into system clipboard
     clipboard = "unnamedplus",
+    -- ruler highlighting textwidth and column 120
     colorcolumn = "+1,121",
     cursorline = true,
     expandtab = true,
     foldlevelstart = 99,
     foldmethod = "syntax",
+    -- show trailing whitespace
     list = true,
     listchars = { trail = "·", tab = "  " },
     mouse = "",
