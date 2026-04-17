@@ -76,6 +76,7 @@ dots:
       sxhkd: "Keyboard shortcuts"
       feh: "Image viewer used to change the wallpaper"
       light: "Monitor backlight control"
+      redshift: "Time-based monitor color temperature"
       maim: "Screenshot utility"
       network-manager-applet: "NetworkManager tray applet (nm-applet)"
       blueman: "blueman tray applet (blueman-applet)"

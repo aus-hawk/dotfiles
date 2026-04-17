@@ -40,5 +40,6 @@ firefox &
 discord &
 spotify-launcher &
 obsidian &
+redshift -l "$(estragon envvar --dir ~/dotfiles redshift_coord)" &
 
 bspc config external_rules_command "$XDG_CONFIG_HOME/bspwm/scripts/spotify.sh"

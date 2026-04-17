@@ -36,5 +36,11 @@ a proper size. This includes things like Firefox, Kitty, and Rofi. The `dpi`
 environment variable is used to control the DPI for all programs that use it to
 render text.
 
+### Redshift
+
+Redshift needs a location in order to know how to adjust the screen temperature.
+The environment variable `redshift_coord` holds the coordinates in `LAT:LONG`
+format so the location is not hard coded.
+
 [estragon]: https://github.com/aus-hawk/estragon
 [firefox-profile]: https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile
