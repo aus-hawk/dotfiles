@@ -10,10 +10,10 @@ vim.g.maplocalleader = " "
 local normal = {
     ["<Leader>e"] = ":NvimTreeFocus<CR>",
     ["<Leader>d"] = ":lua vim.lsp.buf.definition()<CR>",
-    ["<Leader>b"] = "<C-t>",
     ["<Leader>h"] = ":lua vim.lsp.buf.hover()<CR>",
     ["<Leader>?"] = ":lua vim.diagnostic.open_float()<CR>",
     ["<Leader>f"] = ":lua vim.lsp.buf.format { async = true }<CR>",
+    ["<Leader>r"] = ":lua vim.lsp.buf.rename()<CR>",
 
     ["<Leader>/"] = ":nohlsearch<CR>",
 
@@ -31,16 +31,4 @@ local normal = {
 
 for k, v in pairs(normal) do
     keymap("n", k, v, opts)
-end
-
-local all = {
-    -- Convenient wrapped line navigation
-    ["j"] = "gj",
-    ["gj"] = "j",
-    ["k"] = "gk",
-    ["gk"] = "k",
-}
-
-for k, v in pairs(all) do
-    keymap("", k, v, opts)
 end
